@@ -5,7 +5,7 @@ export default function Notification({ profile }) {
 
 
     return (
-        <Fragment key={profile.id}>
+        <Fragment>
             <div className=" flex items-center gap-x-3 px-1 py-3">
                 <img
                     src={profile.img}
