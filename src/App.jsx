@@ -1,6 +1,7 @@
 import Form from "./components/Form.jsx";
 import Header from "./components/Header.jsx"
 import Notification from "./components/Notification.jsx"
+import ReduxTester from "./components/ReduxTester.jsx";
 import useProfiler from "./hooks/useProfiler.jsx";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       { profiles.map(profile => <Notification key={profile.id} profile={profile}  />) }
     </div>
     <Form handleAddNotification={handleAddNotification} />
+    <ReduxTester />
     </>
   )
 }
