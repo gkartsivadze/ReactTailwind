@@ -1,0 +1,14 @@
+@import url("tailwindcss/base");
+@import url("tailwindcss/components");
+@import url("tailwindcss/utilities");
+/* @tailwind components;
+@tailwind utilities; */
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+:root {
+    font-family: "Plus Jakarta Sans";
+}
