@@ -12,3 +12,11 @@
 :root {
     font-family: "Plus Jakarta Sans";
 }
+
+button.bg-gradient-to-tr {
+    --tw-gradient-stops: blue, cyan
+}
+
+h1 {
+    --tw-content: "";
+}

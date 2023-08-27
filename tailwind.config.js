@@ -5,13 +5,19 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'adj': 'min-content 1fr'
+        'adj': 'min-content 1fr',
+        'xxl': '25rem'
       },
       maxWidth: {
         'ext': '2.5rem'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > input');
+      addVariant('beaf', '&::before')
+    }
+  ],
 }
 
