@@ -7,7 +7,7 @@ export default function ReduxTester(  ) {
     const dispatch = useDispatch();
 
     return (
-        <div className="mx-auto max-w-2xl bg-green-200 flex flex-col items-center">
+        <div className="mx-auto max-w-2xl p-5 bg-green-200 flex flex-col items-center">
             <p>Amount: { number }</p>
             <div>
                 <button

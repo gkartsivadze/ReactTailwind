@@ -1,12 +1,15 @@
 import { useForm } from "react-hook-form"
+import { useDispatch } from "react-redux";
+import { HIDE } from "../redux/reducers";
 
 export default function Form({ handleAddNotification }) {
+    const dispatch = useDispatch();
     const { register,
         handleSubmit,
         formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-        handleAddNotification(data)
+        handleAddNotification(data);
     }
 
     return (
@@ -16,6 +19,7 @@ export default function Form({ handleAddNotification }) {
         >
             <h1 className="text-center font-extrabold text-cyan-700 text-3xl pb-5 beaf:content-normal beaf:w-5 beaf:h-5 beaf:bg-cyan-300">Registration Form</h1>
             <button
+                onClick={() => dispatch(HIDE())}
                 className=" absolute top-6 right-6 font-extrabold text-cyan-600"
                 type="button">
                 X
@@ -53,7 +57,7 @@ export default function Form({ handleAddNotification }) {
             <button className=" bg-gradient-to-tr p-2 rounded-full text-white font-extrabold">Submit</button>
             <p className=" text-center">Already hane an account?
                 <a href="#" className=" text-blue-700 ms-1">Sign In</a>
-                </p>
+            </p>
         </form>
     )
 };

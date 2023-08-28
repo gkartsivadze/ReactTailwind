@@ -28,13 +28,13 @@ export default function SubNotification({ profile }) {
     return (
         <div>
             <p className=" font-medium">
-                <strong>{profile.name}</strong>
+                <strong>{ profile.name }</strong>
                 {` ${middleText} `}
-                {profile.type != "messaged" && <span className=" text-cyan-800">{profile.target}</span>}
-                {profile.seen || <svg className=" inline mx-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12"><circle cx="6" cy="6" r="3" fill="red"/></svg>}
+                { profile.type  != "messaged" && <span className=" text-cyan-800">{ profile.target }</span>}
+                { profile.seen  || <svg className=" inline mx-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12"><circle cx="6" cy="6" r="3" fill="red"/></svg>}
             </p>
             <p className=" text-slate-600">
-                {profile.time} ago
+                { profile.time } ago
             </p>
         </div>
     )

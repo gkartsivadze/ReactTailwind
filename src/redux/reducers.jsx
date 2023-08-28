@@ -18,6 +18,18 @@ export const MINUS = () => {
     }
 }
 
+export const SHOW = () => {
+    return {
+        type: "SHOW"
+    }
+}
+
+export const HIDE = () => {
+    return {
+        type: "HIDE"
+    }
+}
+
 const counterReducer = (state = 0, action) => {
     switch(action.type) {
         case "ADD":
@@ -38,9 +50,21 @@ const onOffReducer = (state = false, action) => {
     }
 }
 
+const registrationFormReducer = (state = false, action) => {
+    switch(action.type) {
+        case "SHOW":
+            return true;
+        case "HIDE":
+            return false;
+        default:
+            return state;
+    }
+}
+
 export const store = configureStore({
     reducer: {
         number: counterReducer,
-        onOff: onOffReducer
+        onOff: onOffReducer,
+        registrationFormState: registrationFormReducer
     }
 })
