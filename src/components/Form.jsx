@@ -20,7 +20,7 @@ export default function Form({ handleAddNotification }) {
             <h1 className="text-center font-extrabold text-cyan-700 text-3xl pb-5 beaf:content-normal beaf:w-5 beaf:h-5 beaf:bg-cyan-300">Registration Form</h1>
             <button
                 onClick={() => dispatch(HIDE())}
-                className=" absolute top-6 right-6 font-extrabold text-cyan-600"
+                className=" absolute top-3 right-3 p-3 font-extrabold text-cyan-600"
                 type="button">
                 X
             </button>
